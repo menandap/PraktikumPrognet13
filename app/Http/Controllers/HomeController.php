@@ -22,4 +22,8 @@ class HomeController extends Controller
     {
         return view('product');
     }
+    public function detailproduct()
+    {
+        return view('detail-product');
+    }
 }
