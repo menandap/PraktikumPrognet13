@@ -18,11 +18,12 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/homeproduct', [HomeController::class, 'product'])->name('homeproduct');
-Route::get('/home-detail-product', [HomeController::class, 'detailproduct'])->name('homedetailproduct');
+Route::get('/homeproductdetail', [HomeController::class, 'detail_product'])->name('homeproductdetail');
 Route::get('/home', [AuthController::class, 'homepage'])->middleware('auth')->name('homepage');
 Route::get('/cart', [AuthController::class, 'cart'])->middleware('auth')->name('cart');
 Route::get('/product', [AuthController::class, 'product'])->middleware('auth')->name('product');
-Route::get('/detail-product', [AuthController::class, 'detailproduct'])->middleware('auth')->name('detailproduct');
+Route::get('/detail_product', [AuthController::class, 'detail_product'])->middleware('auth')->name('detail_product');
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
